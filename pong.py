@@ -77,24 +77,24 @@ while True :
 			pygame.quit() #cleans up all the resources
 			exit()
 
-	Paddle1 = Paddle1(30, 20, 0, 0) #height,width,x-pos,y-pos
+	paddle1 = Paddle1(30, 20, 0, 0) #height,width,x-pos,y-pos
 
-	Paddle2 = Paddle2(30, 20, 580, 0)
+	paddle2 = Paddle2(30, 20, 580, 0)
 
-	# Paddle1 = Paddle1()
-	# Paddle1.__init__(100, 100, 0, 0)
-	# Paddle1.__init__(Paddle1, 100, 100, 0, 0)
+	# s = Paddle1()
+	# s.__init__(100, 100, 0, 0)
+	# Paddle1.__init__(s, 100, 100, 0, 0)
 
-	Paddle1.draw(window)
-	Paddle2.draw(window)
+	paddle1.draw(window)
+	paddle2.draw(window)
 
-	# Paddle1.draw(window) ---> Paddle1.draw(Paddle1, window)  ---> Paddle1.draw(Paddle1, screen=window)
+	# s.draw(window) ---> Paddle1.draw(s, window)  ---> Paddle1.draw(s, screen=window)
 
-	dividerLine = Line(400, 300, 0) # Create a line with a height of 400 (matches the window height), at x = 300 (halfway point on the window) and y = 0 (start at top of window)
-	dividerLine.draw(window)  # in pygame x and y coordinates are from the top left
+	line = Line(400, 300, 0) # Create a line with a height of 400 (matches the window height), at x = 300 (halfway point on the window) and y = 0 (start at top of window)
+	line.draw(window)  # in pygame x and y coordinates are from the top left
 
-	score = Text(pygame.font.SysFont("monospace", 24), 200, 50) # "pygame.font.SysFont("times new roman")" would be passed in as the font attrbiute in Class Text; 200 is x and 50 is y, x and y overwrites the Sprites's init's x and y
-	score.draw(window)
+	t = Text(pygame.font.SysFont("monospace", 24), 200, 50) # "pygame.font.SysFont("times new roman")" would be passed in as the font attrbiute in Class Text; 200 is x and 50 is y, x and y overwrites the Sprites's init's x and y
+	t.draw(window)
 
 	ball = Ball(5, 5, 40, 50)
 	ball.draw(window)
